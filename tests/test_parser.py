@@ -21,3 +21,16 @@ def test_cross_page_and_tables():
     assert '1.5 seconds' in by['4.2']['text']
     assert 'E6' in by['4.2']['text']
     assert any(b['kind']=='table_row' for b in by['4.2']['blocks'])
+
+def test_real_ocr_fallback(tmp_path):
+    import fitz
+    src=fitz.open()
+    page=src.new_page()
+    page.insert_text((50,60),'1. Device Overview',fontsize=20)
+    page.insert_text((50,100),'The CT-200 stores 200 readings.',fontsize=12)
+    scan=fitz.open();p=scan.new_page()
+    p.insert_image(p.rect,stream=page.get_pixmap(matrix=fitz.Matrix(2,2)).tobytes('png'))
+    path=tmp_path/'scan.pdf';scan.save(path)
+    nodes,warnings=parse_pdf(path)
+    assert '200 readings' in nodes[-1]['text']
+    assert any('OCR used' in w for w in warnings)

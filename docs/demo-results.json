@@ -1,0 +1,255 @@
+{
+  "v1": {
+    "version": "v1",
+    "nodes": 28,
+    "warnings": [
+      "2.1.1.1: missing immediate parent; attached to 2.1"
+    ]
+  },
+  "v2": {
+    "version": "v2",
+    "nodes": 29,
+    "warnings": [
+      "2.1.1.1: missing immediate parent; attached to 2.1"
+    ]
+  },
+  "generation_before_update": {
+    "id": "70e34b2a-d4b6-4a96-968a-714c3ef447fe",
+    "selection_id": "a407d50a-e356-41e3-b5e6-06ae9caefae4",
+    "schema_version": 1,
+    "created_at": "2026-10-23T13:14:31.905332+00:00",
+    "provider": "mock",
+    "model": "deterministic-fixture",
+    "prompt": "Generate 3-5 distinct QA test ideas. Cite exact source_id and a verbatim evidence_quote. Do not invent device behavior. Schema: {\"$defs\": {\"Case\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"minLength\": 3, \"title\": \"Title\", \"type\": \"string\"}, \"steps\": {\"items\": {\"type\": \"string\"}, \"minItems\": 1, \"title\": \"Steps\", \"type\": \"array\"}, \"expected_result\": {\"minLength\": 5, \"title\": \"Expected Result\", \"type\": \"string\"}, \"source_id\": {\"title\": \"Source Id\", \"type\": \"string\"}, \"evidence_quote\": {\"minLength\": 5, \"title\": \"Evidence Quote\", \"type\": \"string\"}}, \"required\": [\"title\", \"steps\", \"expected_result\", \"source_id\", \"evidence_quote\"], \"title\": \"Case\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"cases\": {\"items\": {\"$ref\": \"#/$defs/Case\"}, \"maxItems\": 5, \"minItems\": 3, \"title\": \"Cases\", \"type\": \"array\"}}, \"required\": [\"cases\"], \"title\": \"Output\", \"type\": \"object\"}\nSources: [{\"id\": \"v1:2.1.1.1\", \"text\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\"}]",
+    "sources": [
+      {
+        "id": "v1:2.1.1.1",
+        "version": "v1",
+        "key": "2.1.1.1",
+        "parent": "2.1",
+        "title": "Battery Life Under Typical Use",
+        "kind": "section",
+        "text": "Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+        "page": 2,
+        "blocks": [
+          {
+            "kind": "paragraph",
+            "text": "Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+            "page": 2,
+            "bbox": [
+              33.0,
+              276.55908203125,
+              357.9840087890625,
+              331.27313232421875
+            ],
+            "cells": null
+          }
+        ],
+        "full_text": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+        "hash": "c57ccc0034c072939fb8fcf4ce191ec2a04a4006387bf561ba61faf101a47927"
+      }
+    ],
+    "output": {
+      "cases": [
+        {
+          "title": "Nominal behavior",
+          "steps": [
+            "Review Battery Life Under Typical Use: verify the documented nominal behavior"
+          ],
+          "expected_result": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+          "source_id": "v1:2.1.1.1",
+          "evidence_quote": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%."
+        },
+        {
+          "title": "Boundary review",
+          "steps": [
+            "Review Battery Life Under Typical Use: identify and verify each stated numerical boundary"
+          ],
+          "expected_result": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+          "source_id": "v1:2.1.1.1",
+          "evidence_quote": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%."
+        },
+        {
+          "title": "Failure behavior",
+          "steps": [
+            "Review Battery Life Under Typical Use: verify documented error or exception handling; mark unspecified behavior as not covered"
+          ],
+          "expected_result": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+          "source_id": "v1:2.1.1.1",
+          "evidence_quote": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%."
+        }
+      ]
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "valid": true,
+        "raw": "{\"cases\": [{\"title\": \"Nominal behavior\", \"steps\": [\"Review Battery Life Under Typical Use: verify the documented nominal behavior\"], \"expected_result\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\", \"source_id\": \"v1:2.1.1.1\", \"evidence_quote\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\"}, {\"title\": \"Boundary review\", \"steps\": [\"Review Battery Life Under Typical Use: identify and verify each stated numerical boundary\"], \"expected_result\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\", \"source_id\": \"v1:2.1.1.1\", \"evidence_quote\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\"}, {\"title\": \"Failure behavior\", \"steps\": [\"Review Battery Life Under Typical Use: verify documented error or exception handling; mark unspecified behavior as not covered\"], \"expected_result\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\", \"source_id\": \"v1:2.1.1.1\", \"evidence_quote\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\"}]}"
+      }
+    ],
+    "against_version": "v1",
+    "stale": false,
+    "changed_source_keys": []
+  },
+  "stale_after_update": [
+    {
+      "id": "70e34b2a-d4b6-4a96-968a-714c3ef447fe",
+      "selection_id": "a407d50a-e356-41e3-b5e6-06ae9caefae4",
+      "schema_version": 1,
+      "created_at": "2026-10-23T13:14:31.905332+00:00",
+      "provider": "mock",
+      "model": "deterministic-fixture",
+      "prompt": "Generate 3-5 distinct QA test ideas. Cite exact source_id and a verbatim evidence_quote. Do not invent device behavior. Schema: {\"$defs\": {\"Case\": {\"additionalProperties\": false, \"properties\": {\"title\": {\"minLength\": 3, \"title\": \"Title\", \"type\": \"string\"}, \"steps\": {\"items\": {\"type\": \"string\"}, \"minItems\": 1, \"title\": \"Steps\", \"type\": \"array\"}, \"expected_result\": {\"minLength\": 5, \"title\": \"Expected Result\", \"type\": \"string\"}, \"source_id\": {\"title\": \"Source Id\", \"type\": \"string\"}, \"evidence_quote\": {\"minLength\": 5, \"title\": \"Evidence Quote\", \"type\": \"string\"}}, \"required\": [\"title\", \"steps\", \"expected_result\", \"source_id\", \"evidence_quote\"], \"title\": \"Case\", \"type\": \"object\"}}, \"additionalProperties\": false, \"properties\": {\"cases\": {\"items\": {\"$ref\": \"#/$defs/Case\"}, \"maxItems\": 5, \"minItems\": 3, \"title\": \"Cases\", \"type\": \"array\"}}, \"required\": [\"cases\"], \"title\": \"Output\", \"type\": \"object\"}\nSources: [{\"id\": \"v1:2.1.1.1\", \"text\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\"}]",
+      "sources": [
+        {
+          "id": "v1:2.1.1.1",
+          "version": "v1",
+          "key": "2.1.1.1",
+          "parent": "2.1",
+          "title": "Battery Life Under Typical Use",
+          "kind": "section",
+          "text": "Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+          "page": 2,
+          "blocks": [
+            {
+              "kind": "paragraph",
+              "text": "Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+              "page": 2,
+              "bbox": [
+                33.0,
+                276.55908203125,
+                357.9840087890625,
+                331.27313232421875
+              ],
+              "cells": null
+            }
+          ],
+          "full_text": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+          "hash": "c57ccc0034c072939fb8fcf4ce191ec2a04a4006387bf561ba61faf101a47927"
+        }
+      ],
+      "output": {
+        "cases": [
+          {
+            "title": "Nominal behavior",
+            "steps": [
+              "Review Battery Life Under Typical Use: verify the documented nominal behavior"
+            ],
+            "expected_result": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+            "source_id": "v1:2.1.1.1",
+            "evidence_quote": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%."
+          },
+          {
+            "title": "Boundary review",
+            "steps": [
+              "Review Battery Life Under Typical Use: identify and verify each stated numerical boundary"
+            ],
+            "expected_result": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+            "source_id": "v1:2.1.1.1",
+            "evidence_quote": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%."
+          },
+          {
+            "title": "Failure behavior",
+            "steps": [
+              "Review Battery Life Under Typical Use: verify documented error or exception handling; mark unspecified behavior as not covered"
+            ],
+            "expected_result": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+            "source_id": "v1:2.1.1.1",
+            "evidence_quote": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%."
+          }
+        ]
+      },
+      "attempts": [
+        {
+          "attempt": 1,
+          "valid": true,
+          "raw": "{\"cases\": [{\"title\": \"Nominal behavior\", \"steps\": [\"Review Battery Life Under Typical Use: verify the documented nominal behavior\"], \"expected_result\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\", \"source_id\": \"v1:2.1.1.1\", \"evidence_quote\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\"}, {\"title\": \"Boundary review\", \"steps\": [\"Review Battery Life Under Typical Use: identify and verify each stated numerical boundary\"], \"expected_result\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\", \"source_id\": \"v1:2.1.1.1\", \"evidence_quote\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\"}, {\"title\": \"Failure behavior\", \"steps\": [\"Review Battery Life Under Typical Use: verify documented error or exception handling; mark unspecified behavior as not covered\"], \"expected_result\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\", \"source_id\": \"v1:2.1.1.1\", \"evidence_quote\": \"Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\\u2010battery icon once remaining capacity falls below 15%.\"}]}"
+        }
+      ],
+      "against_version": "v2",
+      "stale": true,
+      "changed_source_keys": [
+        "2.1.1.1"
+      ]
+    }
+  ],
+  "diff": [
+    {
+      "key": "2",
+      "status": "modified",
+      "before": "Physical and Electrical Specifications General Specifications Parameter Value Measurement method Oscillometric Pressure range 0\u2013299 mmHg Pulse range 40\u2013199 bpm Accuracy (pressure) \u00b13 mmHg Accuracy (pulse) \u00b15% Power source 4x AA batteries or 6V DC adapter Display Backlit LCD Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%. Cuff Specifications The standard cuff supplied with the CT\u2010200 fits arm circumferences of 22\u201332 cm. A separate large cuff (part number CT200\u2010LC) is available for 32\u201342 cm and must be ordered separately; using the standard cuff outside its rated range will produce inaccurate readings.",
+      "after": "Physical and Electrical Specifications General Specifications Parameter Value Measurement method Oscillometric Pressure range 0\u2013299 mmHg Pulse range 40\u2013199 bpm Accuracy (pressure) \u00b13 mmHg Accuracy (pulse) \u00b15% Power source 4x AA batteries or 6V DC adapter Display Backlit LCD Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 250 measurement cycles before requiring replacement \u2014 revised downward from earlier estimates after extended field testing. The device displays a low\u2010battery icon once remaining capacity falls below 10%. Cuff Specifications The standard cuff supplied with the CT\u2010200 fits arm circumferences of 22\u201332 cm. A separate large cuff (part number CT200\u2010LC) is available for 32\u201342 cm and must be ordered separately; using the standard cuff outside its rated range will produce inaccurate readings.",
+      "diff": "--- \n+++ \n@@ -54,12 +54,22 @@\n batteries\n provide\n approximately\n-300\n+250\n measurement\n cycles\n before\n requiring\n-replacement.\n+replacement\n+\u2014\n+revised\n+downward\n+from\n+earlier\n+estimates\n+after\n+extended\n+field\n+testing.\n The\n device\n displays\n@@ -71,7 +81,7 @@\n capacity\n falls\n below\n-15%.\n+10%.\n Cuff\n Specifications\n The"
+    },
+    {
+      "key": "2.1",
+      "status": "modified",
+      "before": "General Specifications Parameter Value Measurement method Oscillometric Pressure range 0\u2013299 mmHg Pulse range 40\u2013199 bpm Accuracy (pressure) \u00b13 mmHg Accuracy (pulse) \u00b15% Power source 4x AA batteries or 6V DC adapter Display Backlit LCD Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+      "after": "General Specifications Parameter Value Measurement method Oscillometric Pressure range 0\u2013299 mmHg Pulse range 40\u2013199 bpm Accuracy (pressure) \u00b13 mmHg Accuracy (pulse) \u00b15% Power source 4x AA batteries or 6V DC adapter Display Backlit LCD Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 250 measurement cycles before requiring replacement \u2014 revised downward from earlier estimates after extended field testing. The device displays a low\u2010battery icon once remaining capacity falls below 10%.",
+      "diff": "--- \n+++ \n@@ -50,12 +50,22 @@\n batteries\n provide\n approximately\n-300\n+250\n measurement\n cycles\n before\n requiring\n-replacement.\n+replacement\n+\u2014\n+revised\n+downward\n+from\n+earlier\n+estimates\n+after\n+extended\n+field\n+testing.\n The\n device\n displays\n@@ -67,4 +77,4 @@\n capacity\n falls\n below\n-15%.\n+10%."
+    },
+    {
+      "key": "2.1.1.1",
+      "status": "modified",
+      "before": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%.",
+      "after": "Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 250 measurement cycles before requiring replacement \u2014 revised downward from earlier estimates after extended field testing. The device displays a low\u2010battery icon once remaining capacity falls below 10%.",
+      "diff": "--- \n+++ \n@@ -16,12 +16,22 @@\n batteries\n provide\n approximately\n-300\n+250\n measurement\n cycles\n before\n requiring\n-replacement.\n+replacement\n+\u2014\n+revised\n+downward\n+from\n+earlier\n+estimates\n+after\n+extended\n+field\n+testing.\n The\n device\n displays\n@@ -33,4 +43,4 @@\n capacity\n falls\n below\n-15%.\n+10%."
+    },
+    {
+      "key": "3",
+      "status": "modified",
+      "before": "Device Operation Powering On and Profile Selection Press and hold the power button for one second to power on the device. Use the profile button to select User 1 or User 2 before beginning a measurement; readings are stored against whichever profile is active at the time of measurement. Cuff Inflation Sequence On starting a measurement, the device inflates the cuff to an initial target of 180 mmHg. If the user's pulse is not detected by 180 mmHg, the device inflates in 40 mmHg increments up to a maximum of 299 mmHg before aborting with an error. Deflation occurs in controlled steps of approximately 3 mmHg to capture oscillometric pulse data. Auto Shutoff To conserve battery, the CT\u2010200 automatically powers off after 60 seconds of inactivity on the home screen, and after 3 minutes of inactivity if a measurement screen is left open without starting a reading. Result Display and Classification After a completed measurement, the device displays systolic pressure, diastolic pressure, and pulse rate simultaneously, along with a classification indicator (see 2.1, 4.3 for related specifications and alarm thresholds) based on the most recent joint clinical guidance available at time of manufacture. 1. Normal: systolic < 120 and diastolic < 80 2. Elevated: systolic 120\u2013129 and diastolic < 80 3. Hypertension Stage 1: systolic 130\u2013139 or diastolic 80\u201389 4. Hypertension Stage 2: systolic \u2265 140 or diastolic \u2265 90 5. Hypertensive Crisis: systolic > 180 or diastolic > 120 \u2014 device recommends seeking immediate medical attention",
+      "after": "Device Operation Powering On and Profile Selection Press and hold the power button for one second to power on the device. Use the profile button to select User 1 or User 2 before beginning a measurement; readings are stored against whichever profile is active at the time of measurement. Cuff Inflation Sequence On starting a measurement, the device inflates the cuff to an initial target of 180 mmHg. If the user's pulse is not detected by 180 mmHg, the device inflates in 30 mmHg increments up to a maximum of 299 mmHg before aborting with an error. Deflation occurs in controlled steps of approximately 3 mmHg to capture oscillometric pulse data. Increment size was reduced from the original 40 mmHg to improve pulse-detection reliability in field testing. Auto Shutoff To conserve battery, the CT\u2010200 automatically powers off after 60 seconds of inactivity on the home screen, and after 3 minutes of inactivity if a measurement screen is left open without starting a reading. Result Display and Classification After a completed measurement, the device displays systolic pressure, diastolic pressure, and pulse rate simultaneously, along with a classification indicator (see 2.1, 4.3 for related specifications and alarm thresholds) based on the most recent joint clinical guidance available at time of manufacture. 1. Normal: systolic < 120 and diastolic < 80 2. Elevated: systolic 120\u2013129 and diastolic < 80 3. Hypertension Stage 1: systolic 130\u2013139 or diastolic 80\u201389 4. Hypertension Stage 2: systolic \u2265 140 or diastolic \u2265 90 5. Hypertensive Crisis: systolic > 180 or diastolic > 120 \u2014 device recommends seeking immediate medical attention",
+      "diff": "--- \n+++ \n@@ -80,7 +80,7 @@\n device\n inflates\n in\n-40\n+30\n mmHg\n increments\n up\n@@ -109,6 +109,22 @@\n oscillometric\n pulse\n data.\n+Increment\n+size\n+was\n+reduced\n+from\n+the\n+original\n+40\n+mmHg\n+to\n+improve\n+pulse-detection\n+reliability\n+in\n+field\n+testing.\n Auto\n Shutoff\n To"
+    },
+    {
+      "key": "3.2",
+      "status": "modified",
+      "before": "Cuff Inflation Sequence On starting a measurement, the device inflates the cuff to an initial target of 180 mmHg. If the user's pulse is not detected by 180 mmHg, the device inflates in 40 mmHg increments up to a maximum of 299 mmHg before aborting with an error. Deflation occurs in controlled steps of approximately 3 mmHg to capture oscillometric pulse data.",
+      "after": "Cuff Inflation Sequence On starting a measurement, the device inflates the cuff to an initial target of 180 mmHg. If the user's pulse is not detected by 180 mmHg, the device inflates in 30 mmHg increments up to a maximum of 299 mmHg before aborting with an error. Deflation occurs in controlled steps of approximately 3 mmHg to capture oscillometric pulse data. Increment size was reduced from the original 40 mmHg to improve pulse-detection reliability in field testing.",
+      "diff": "--- \n+++ \n@@ -31,7 +31,7 @@\n device\n inflates\n in\n-40\n+30\n mmHg\n increments\n up\n@@ -60,3 +60,19 @@\n oscillometric\n pulse\n data.\n+Increment\n+size\n+was\n+reduced\n+from\n+the\n+original\n+40\n+mmHg\n+to\n+improve\n+pulse-detection\n+reliability\n+in\n+field\n+testing."
+    },
+    {
+      "key": "4",
+      "status": "modified",
+      "before": "Alarms and Safety Behavior Overpressure Protection If cuff pressure exceeds 299 mmHg at any point, or exceeds 300 mmHg for longer than 3 seconds due to sensor fault, the device immediately triggers an emergency deflation valve, halting inflation and venting the cuff within 2 seconds, independent of the main firmware control loop. Error Codes Code Meaning Device Behavior Aborts measurement, displays E1 E1 Cuff not connected or leak detected E2 Motion artifact detected during measurement Aborts measurement, displays E2, prompts retry E3 Overpressure condition Auto-deflates within 2 seconds, displays E3 Aborts measurement, displays E4 E4 Low battery during measurement E5 Internal sensor fault Device disables measurement function, displays E5 until serviced Alarm Thresholds The device does not sound an audible alarm for elevated readings by default; audible alarms are limited to the E1\u2013E5 error conditions above and are user\u2010configurable in the settings menu, except for E3 (overpressure), which cannot be silenced for safety reasons.",
+      "after": "Alarms and Safety Behavior Overpressure Protection If cuff pressure exceeds 299 mmHg at any point, or exceeds 300 mmHg for longer than 3 seconds due to sensor fault, the device immediately triggers an emergency deflation valve, halting inflation and venting the cuff within 2 seconds, independent of the main firmware control loop. Error Codes Code Meaning Device Behavior Aborts measurement, displays E1 E1 Cuff not connected or leak detected E2 Motion artifact detected during measurement Aborts measurement, displays E2, prompts retry E3 Overpressure condition Auto-deflates within 1.5 seconds, displays E3 Aborts measurement, displays E4 E4 Low battery during measurement E5 Internal sensor fault Device disables measurement function, displays E5 until serviced E6 Bluetooth sync failure Displays E6 on next sync attempt; does not affect measurement Alarm Thresholds The device does not sound an audible alarm for elevated readings by default; audible alarms are limited to the E1\u2013E6 error conditions above and are user\u2010configurable in the settings menu, except for E3 (overpressure), which cannot be silenced for safety reasons.",
+      "diff": "--- \n+++ \n@@ -84,7 +84,7 @@\n condition\n Auto-deflates\n within\n-2\n+1.5\n seconds,\n displays\n E3\n@@ -109,6 +109,20 @@\n E5\n until\n serviced\n+E6\n+Bluetooth\n+sync\n+failure\n+Displays\n+E6\n+on\n+next\n+sync\n+attempt;\n+does\n+not\n+affect\n+measurement\n Alarm\n Thresholds\n The\n@@ -130,7 +144,7 @@\n limited\n to\n the\n-E1\u2013E5\n+E1\u2013E6\n error\n conditions\n above"
+    },
+    {
+      "key": "4.2",
+      "status": "modified",
+      "before": "Error Codes Code Meaning Device Behavior Aborts measurement, displays E1 E1 Cuff not connected or leak detected E2 Motion artifact detected during measurement Aborts measurement, displays E2, prompts retry E3 Overpressure condition Auto-deflates within 2 seconds, displays E3 Aborts measurement, displays E4 E4 Low battery during measurement E5 Internal sensor fault Device disables measurement function, displays E5 until serviced",
+      "after": "Error Codes Code Meaning Device Behavior Aborts measurement, displays E1 E1 Cuff not connected or leak detected E2 Motion artifact detected during measurement Aborts measurement, displays E2, prompts retry E3 Overpressure condition Auto-deflates within 1.5 seconds, displays E3 Aborts measurement, displays E4 E4 Low battery during measurement E5 Internal sensor fault Device disables measurement function, displays E5 until serviced E6 Bluetooth sync failure Displays E6 on next sync attempt; does not affect measurement",
+      "diff": "--- \n+++ \n@@ -32,7 +32,7 @@\n condition\n Auto-deflates\n within\n-2\n+1.5\n seconds,\n displays\n E3\n@@ -57,3 +57,17 @@\n E5\n until\n serviced\n+E6\n+Bluetooth\n+sync\n+failure\n+Displays\n+E6\n+on\n+next\n+sync\n+attempt;\n+does\n+not\n+affect\n+measurement"
+    },
+    {
+      "key": "4.3",
+      "status": "modified",
+      "before": "Alarm Thresholds The device does not sound an audible alarm for elevated readings by default; audible alarms are limited to the E1\u2013E5 error conditions above and are user\u2010configurable in the settings menu, except for E3 (overpressure), which cannot be silenced for safety reasons.",
+      "after": "Alarm Thresholds The device does not sound an audible alarm for elevated readings by default; audible alarms are limited to the E1\u2013E6 error conditions above and are user\u2010configurable in the settings menu, except for E3 (overpressure), which cannot be silenced for safety reasons.",
+      "diff": "--- \n+++ \n@@ -19,7 +19,7 @@\n limited\n to\n the\n-E1\u2013E5\n+E1\u2013E6\n error\n conditions\n above"
+    },
+    {
+      "key": "5",
+      "status": "modified",
+      "before": "Data Management Local Storage The CT\u2010200 stores up to 100 readings per user profile in non\u2010volatile memory. When storage is full, the oldest reading for that profile is overwritten automatically; there is no user\u2010facing warning before this occurs. Bluetooth Sync The device can pair with the CardioTrack companion app via Bluetooth Low Energy. Readings sync automatically when the app is open and the device is within range; there is no manual \"sync now\" trigger in firmware version 1.x.",
+      "after": "Data Management Local Storage The CT\u2010200 stores up to 100 readings per user profile in non\u2010volatile memory. When storage is full, the oldest reading for that profile is overwritten automatically; there is no user\u2010facing warning before this occurs. Bluetooth Sync The device can pair with the CardioTrack companion app via Bluetooth Low Energy. Readings sync automatically when the app is open and the device is within range; there is no manual \"sync now\" trigger in firmware version 1.x. Data Export Starting with firmware 1.4, the companion app supports exporting stored readings as a CSV file containing timestamp, profile, systolic, diastolic, pulse, and classification columns. Export requires the device to have completed at least one successful Bluetooth sync in the current session.",
+      "diff": "--- \n+++ \n@@ -76,3 +76,46 @@\n firmware\n version\n 1.x.\n+Data\n+Export\n+Starting\n+with\n+firmware\n+1.4,\n+the\n+companion\n+app\n+supports\n+exporting\n+stored\n+readings\n+as\n+a\n+CSV\n+file\n+containing\n+timestamp,\n+profile,\n+systolic,\n+diastolic,\n+pulse,\n+and\n+classification\n+columns.\n+Export\n+requires\n+the\n+device\n+to\n+have\n+completed\n+at\n+least\n+one\n+successful\n+Bluetooth\n+sync\n+in\n+the\n+current\n+session."
+    },
+    {
+      "key": "5.3",
+      "status": "added",
+      "before": "",
+      "after": "Data Export Starting with firmware 1.4, the companion app supports exporting stored readings as a CSV file containing timestamp, profile, systolic, diastolic, pulse, and classification columns. Export requires the device to have completed at least one successful Bluetooth sync in the current session.",
+      "diff": "--- \n+++ \n@@ -0,0 +1,43 @@\n+Data\n+Export\n+Starting\n+with\n+firmware\n+1.4,\n+the\n+companion\n+app\n+supports\n+exporting\n+stored\n+readings\n+as\n+a\n+CSV\n+file\n+containing\n+timestamp,\n+profile,\n+systolic,\n+diastolic,\n+pulse,\n+and\n+classification\n+columns.\n+Export\n+requires\n+the\n+device\n+to\n+have\n+completed\n+at\n+least\n+one\n+successful\n+Bluetooth\n+sync\n+in\n+the\n+current\n+session."
+    },
+    {
+      "key": "root",
+      "status": "modified",
+      "before": "CardioTrack CT-200 Home Blood Pressure Monitor \u2014 Technical & User Manual CardioTrack CT-200 Home Blood Pressure Monitor \u2014 Technical & User Manual Device Overview The CardioTrack CT-200 is an oscillometric, upper-arm blood pressure monitor intended for home use by adult users. It measures systolic pressure, diastolic pressure, and pulse rate, and stores up to 200 readings across two user profiles. Intended Use The CT-200 is intended to non-invasively measure blood pressure and pulse rate in adults with an arm circumference of 22\u201342 cm. It is not intended for use on neonates, infants, or pregnant users, and is not a diagnostic device \u2014 readings should be interpreted by a qualified clinician. Indications and Contraindications The device should not be used on the arm ipsilateral to a mastectomy, on limbs with an active intravenous line, or on users with severe arrhythmia without clinician guidance, since oscillometric measurement can be unreliable in these cases. Physical and Electrical Specifications General Specifications Parameter Value Measurement method Oscillometric Pressure range 0\u2013299 mmHg Pulse range 40\u2013199 bpm Accuracy (pressure) \u00b13 mmHg Accuracy (pulse) \u00b15% Power source 4x AA batteries or 6V DC adapter Display Backlit LCD Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 300 measurement cycles before requiring replacement. The device displays a low\u2010battery icon once remaining capacity falls below 15%. Cuff Specifications The standard cuff supplied with the CT\u2010200 fits arm circumferences of 22\u201332 cm. A separate large cuff (part number CT200\u2010LC) is available for 32\u201342 cm and must be ordered separately; using the standard cuff outside its rated range will produce inaccurate readings. Device Operation Powering On and Profile Selection Press and hold the power button for one second to power on the device. Use the profile button to select User 1 or User 2 before beginning a measurement; readings are stored against whichever profile is active at the time of measurement. Cuff Inflation Sequence On starting a measurement, the device inflates the cuff to an initial target of 180 mmHg. If the user's pulse is not detected by 180 mmHg, the device inflates in 40 mmHg increments up to a maximum of 299 mmHg before aborting with an error. Deflation occurs in controlled steps of approximately 3 mmHg to capture oscillometric pulse data. Auto Shutoff To conserve battery, the CT\u2010200 automatically powers off after 60 seconds of inactivity on the home screen, and after 3 minutes of inactivity if a measurement screen is left open without starting a reading. Result Display and Classification After a completed measurement, the device displays systolic pressure, diastolic pressure, and pulse rate simultaneously, along with a classification indicator (see 2.1, 4.3 for related specifications and alarm thresholds) based on the most recent joint clinical guidance available at time of manufacture. 1. Normal: systolic < 120 and diastolic < 80 2. Elevated: systolic 120\u2013129 and diastolic < 80 3. Hypertension Stage 1: systolic 130\u2013139 or diastolic 80\u201389 4. Hypertension Stage 2: systolic \u2265 140 or diastolic \u2265 90 5. Hypertensive Crisis: systolic > 180 or diastolic > 120 \u2014 device recommends seeking immediate medical attention Alarms and Safety Behavior Overpressure Protection If cuff pressure exceeds 299 mmHg at any point, or exceeds 300 mmHg for longer than 3 seconds due to sensor fault, the device immediately triggers an emergency deflation valve, halting inflation and venting the cuff within 2 seconds, independent of the main firmware control loop. Error Codes Code Meaning Device Behavior Aborts measurement, displays E1 E1 Cuff not connected or leak detected E2 Motion artifact detected during measurement Aborts measurement, displays E2, prompts retry E3 Overpressure condition Auto-deflates within 2 seconds, displays E3 Aborts measurement, displays E4 E4 Low battery during measurement E5 Internal sensor fault Device disables measurement function, displays E5 until serviced Alarm Thresholds The device does not sound an audible alarm for elevated readings by default; audible alarms are limited to the E1\u2013E5 error conditions above and are user\u2010configurable in the settings menu, except for E3 (overpressure), which cannot be silenced for safety reasons. Data Management Local Storage The CT\u2010200 stores up to 100 readings per user profile in non\u2010volatile memory. When storage is full, the oldest reading for that profile is overwritten automatically; there is no user\u2010facing warning before this occurs. Bluetooth Sync The device can pair with the CardioTrack companion app via Bluetooth Low Energy. Readings sync automatically when the app is open and the device is within range; there is no manual \"sync now\" trigger in firmware version 1.x. Maintenance and Cleaning Cleaning Instructions Wipe the device body and cuff exterior with a soft, dry cloth or one lightly dampened with water. Do not submerge the device or cuff, and do not use alcohol, solvents, or abrasive cleaners on the display. Calibration Anthropic recommends professional recalibration every 2 years or after any drop or significant impact. The device does not perform self\u2010calibration; there is no field calibration procedure available to end users. Troubleshooting Error Codes If a code from Section 4.2 appears and persists after following the on\u2010screen retry prompt twice, users should discontinue use and contact CardioTrack support rather than attempting further self\u2010diagnosis, particularly for E5, which indicates an internal sensor fault. Inconsistent Readings Inconsistent readings between measurements are most commonly caused by cuff mispositioning, talking or moving during measurement, or measuring within 30 minutes of exercise, caffeine, or smoking; the manual recommends resting quietly for 5 minutes before remeasuring. Regulatory Information Classification The CT\u2010200 is classified as a Class II medical device under applicable regulations for non\u2010invasive blood pressure monitors and has been validated against relevant clinical accuracy standards for oscillometric devices.",
+      "after": "CardioTrack CT-200 Home Blood Pressure Monitor \u2014 Technical & User Manual CardioTrack CT-200 Home Blood Pressure Monitor \u2014 Technical & User Manual Device Overview The CardioTrack CT-200 is an oscillometric, upper-arm blood pressure monitor intended for home use by adult users. It measures systolic pressure, diastolic pressure, and pulse rate, and stores up to 200 readings across two user profiles. Intended Use The CT-200 is intended to non-invasively measure blood pressure and pulse rate in adults with an arm circumference of 22\u201342 cm. It is not intended for use on neonates, infants, or pregnant users, and is not a diagnostic device \u2014 readings should be interpreted by a qualified clinician. Indications and Contraindications The device should not be used on the arm ipsilateral to a mastectomy, on limbs with an active intravenous line, or on users with severe arrhythmia without clinician guidance, since oscillometric measurement can be unreliable in these cases. Physical and Electrical Specifications General Specifications Parameter Value Measurement method Oscillometric Pressure range 0\u2013299 mmHg Pulse range 40\u2013199 bpm Accuracy (pressure) \u00b13 mmHg Accuracy (pulse) \u00b15% Power source 4x AA batteries or 6V DC adapter Display Backlit LCD Battery Life Under Typical Use Under typical use (three measurements per day), four AA alkaline batteries provide approximately 250 measurement cycles before requiring replacement \u2014 revised downward from earlier estimates after extended field testing. The device displays a low\u2010battery icon once remaining capacity falls below 10%. Cuff Specifications The standard cuff supplied with the CT\u2010200 fits arm circumferences of 22\u201332 cm. A separate large cuff (part number CT200\u2010LC) is available for 32\u201342 cm and must be ordered separately; using the standard cuff outside its rated range will produce inaccurate readings. Device Operation Powering On and Profile Selection Press and hold the power button for one second to power on the device. Use the profile button to select User 1 or User 2 before beginning a measurement; readings are stored against whichever profile is active at the time of measurement. Cuff Inflation Sequence On starting a measurement, the device inflates the cuff to an initial target of 180 mmHg. If the user's pulse is not detected by 180 mmHg, the device inflates in 30 mmHg increments up to a maximum of 299 mmHg before aborting with an error. Deflation occurs in controlled steps of approximately 3 mmHg to capture oscillometric pulse data. Increment size was reduced from the original 40 mmHg to improve pulse-detection reliability in field testing. Auto Shutoff To conserve battery, the CT\u2010200 automatically powers off after 60 seconds of inactivity on the home screen, and after 3 minutes of inactivity if a measurement screen is left open without starting a reading. Result Display and Classification After a completed measurement, the device displays systolic pressure, diastolic pressure, and pulse rate simultaneously, along with a classification indicator (see 2.1, 4.3 for related specifications and alarm thresholds) based on the most recent joint clinical guidance available at time of manufacture. 1. Normal: systolic < 120 and diastolic < 80 2. Elevated: systolic 120\u2013129 and diastolic < 80 3. Hypertension Stage 1: systolic 130\u2013139 or diastolic 80\u201389 4. Hypertension Stage 2: systolic \u2265 140 or diastolic \u2265 90 5. Hypertensive Crisis: systolic > 180 or diastolic > 120 \u2014 device recommends seeking immediate medical attention Alarms and Safety Behavior Overpressure Protection If cuff pressure exceeds 299 mmHg at any point, or exceeds 300 mmHg for longer than 3 seconds due to sensor fault, the device immediately triggers an emergency deflation valve, halting inflation and venting the cuff within 2 seconds, independent of the main firmware control loop. Error Codes Code Meaning Device Behavior Aborts measurement, displays E1 E1 Cuff not connected or leak detected E2 Motion artifact detected during measurement Aborts measurement, displays E2, prompts retry E3 Overpressure condition Auto-deflates within 1.5 seconds, displays E3 Aborts measurement, displays E4 E4 Low battery during measurement E5 Internal sensor fault Device disables measurement function, displays E5 until serviced E6 Bluetooth sync failure Displays E6 on next sync attempt; does not affect measurement Alarm Thresholds The device does not sound an audible alarm for elevated readings by default; audible alarms are limited to the E1\u2013E6 error conditions above and are user\u2010configurable in the settings menu, except for E3 (overpressure), which cannot be silenced for safety reasons. Data Management Local Storage The CT\u2010200 stores up to 100 readings per user profile in non\u2010volatile memory. When storage is full, the oldest reading for that profile is overwritten automatically; there is no user\u2010facing warning before this occurs. Bluetooth Sync The device can pair with the CardioTrack companion app via Bluetooth Low Energy. Readings sync automatically when the app is open and the device is within range; there is no manual \"sync now\" trigger in firmware version 1.x. Data Export Starting with firmware 1.4, the companion app supports exporting stored readings as a CSV file containing timestamp, profile, systolic, diastolic, pulse, and classification columns. Export requires the device to have completed at least one successful Bluetooth sync in the current session. Maintenance and Cleaning Cleaning Instructions Wipe the device body and cuff exterior with a soft, dry cloth or one lightly dampened with water. Do not submerge the device or cuff, and do not use alcohol, solvents, or abrasive cleaners on the display. Calibration Anthropic recommends professional recalibration every 2 years or after any drop or significant impact. The device does not perform self\u2010calibration; there is no field calibration procedure available to end users. Troubleshooting Error Codes If a code from Section 4.2 appears and persists after following the on\u2010screen retry prompt twice, users should discontinue use and contact CardioTrack support rather than attempting further self\u2010diagnosis, particularly for E5, which indicates an internal sensor fault. Inconsistent Readings Inconsistent readings between measurements are most commonly caused by cuff mispositioning, talking or moving during measurement, or measuring within 30 minutes of exercise, caffeine, or smoking; the manual recommends resting quietly for 5 minutes before remeasuring. Regulatory Information Classification The CT\u2010200 is classified as a Class II medical device under applicable regulations for non\u2010invasive blood pressure monitors and has been validated against relevant clinical accuracy standards for oscillometric devices.",
+      "diff": "--- \n+++ \n@@ -205,12 +205,22 @@\n batteries\n provide\n approximately\n-300\n+250\n measurement\n cycles\n before\n requiring\n-replacement.\n+replacement\n+\u2014\n+revised\n+downward\n+from\n+earlier\n+estimates\n+after\n+extended\n+field\n+testing.\n The\n device\n displays\n@@ -222,7 +232,7 @@\n capacity\n falls\n below\n-15%.\n+10%.\n Cuff\n Specifications\n The\n@@ -349,7 +359,7 @@\n device\n inflates\n in\n-40\n+30\n mmHg\n increments\n up\n@@ -378,6 +388,22 @@\n oscillometric\n pulse\n data.\n+Increment\n+size\n+was\n+reduced\n+from\n+the\n+original\n+40\n+mmHg\n+to\n+improve\n+pulse-detection\n+reliability\n+in\n+field\n+testing.\n Auto\n Shutoff\n To\n@@ -600,7 +626,7 @@\n condition\n Auto-deflates\n within\n-2\n+1.5\n seconds,\n displays\n E3\n@@ -625,6 +651,20 @@\n E5\n until\n serviced\n+E6\n+Bluetooth\n+sync\n+failure\n+Displays\n+E6\n+on\n+next\n+sync\n+attempt;\n+does\n+not\n+affect\n+measurement\n Alarm\n Thresholds\n The\n@@ -646,7 +686,7 @@\n limited\n to\n the\n-E1\u2013E5\n+E1\u2013E6\n error\n conditions\n above\n@@ -746,6 +786,49 @@\n firmware\n version\n 1.x.\n+Data\n+Export\n+Starting\n+with\n+firmware\n+1.4,\n+the\n+companion\n+app\n+supports\n+exporting\n+stored\n+readings\n+as\n+a\n+CSV\n+file\n+containing\n+timestamp,\n+profile,\n+systolic,\n+diastolic,\n+pulse,\n+and\n+classification\n+columns.\n+Export\n+requires\n+the\n+device\n+to\n+have\n+completed\n+at\n+least\n+one\n+successful\n+Bluetooth\n+sync\n+in\n+the\n+current\n+session.\n Maintenance\n and\n Cleaning"
+    }
+  ]
+}

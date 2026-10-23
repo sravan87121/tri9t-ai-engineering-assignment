@@ -74,3 +74,25 @@ def test_live_missing_key_is_explicit(client,monkeypatch):
     monkeypatch.setenv('LLM_PROVIDER','openai-compatible');monkeypatch.delenv('LLM_API_KEY',raising=False)
     assert client.post(f'/selections/{sid}/generate').status_code==502
     assert client.get('/generations').json()==[]
+
+def test_provider_http_contract(monkeypatch):
+    import httpx
+    from app import llm
+    monkeypatch.setenv('LLM_PROVIDER','openai-compatible')
+    monkeypatch.setenv('LLM_API_KEY','test-key')
+    monkeypatch.setenv('LLM_BASE_URL','https://provider.example/v1')
+    original=httpx.Client
+    def handle(request):
+        assert request.url.path=='/v1/chat/completions'
+        assert request.headers['authorization']=='Bearer test-key'
+        assert json.loads(request.content)['response_format']=={'type':'json_object'}
+        return httpx.Response(200,json={'choices':[{'message':{'content':'{"cases":[]}'}}]})
+    monkeypatch.setattr(llm.httpx,'Client',lambda **kw:original(transport=httpx.MockTransport(handle),**kw))
+    assert llm.provider_call('test',[])=='{"cases":[]}'
+
+def test_persistent_restart(tmp_path):
+    url='sqlite:///'+str(tmp_path/'persistent.db')
+    with TestClient(create_app(url)) as c:upload(c,'v1')
+    with TestClient(create_app(url)) as c:
+        assert c.get('/nodes/v1:4.2').status_code==200
+        assert len(c.get('/versions').json())==1
